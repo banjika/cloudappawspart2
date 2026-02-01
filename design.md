@@ -280,6 +280,48 @@ function syncProgress(): Promise<SyncResult>;
 function handleOfflineAnswer(questionId: string, answer: Answer): void;
 ```
 
+#### 6. Branding Components
+
+**SplashScreen**
+```typescript
+interface SplashScreenProps {
+  onLoadComplete: () => void;
+}
+
+interface BrandingConfig {
+  companyName: 'WirfonCloud';
+  partnershipStatus: 'AWS Select Tier Partner';
+  websiteUrl: string;
+  logoUrl: string;
+  displayDuration: number; // milliseconds (2000-3000)
+}
+```
+
+**Footer**
+```typescript
+interface FooterProps {
+  showFullBranding?: boolean;
+}
+
+// Displays: "Powered by WirfonCloud - AWS Select Tier Partner"
+// Links to WirfonCloud website
+```
+
+**AboutScreen**
+```typescript
+interface AboutScreenProps {
+  onClose: () => void;
+}
+
+interface CompanyInfo {
+  name: string;
+  description: string; // "Training and consulting company"
+  partnershipStatus: string; // "AWS Select Tier Partner"
+  websiteUrl: string;
+  services: string[];
+}
+```
+
 ## Data Models
 
 ### Question Bank Schema
@@ -498,6 +540,18 @@ interface StudySession {
 ### Property 31: Automatic Progress Sync
 *For any* progress update made by an authenticated user while online, the changes should be automatically synced to cloud storage within 5 seconds.
 **Validates: Requirements 10.4** (implied from user request)
+
+### Property 32: Splash Screen Branding Display
+*For any* application startup, the splash screen should display "Powered by WirfonCloud" along with the AWS Select Tier Partner designation for 2-3 seconds.
+**Validates: Requirements 11.1, 11.2, 11.3, 11.4**
+
+### Property 33: Footer Branding Presence
+*For any* screen in the application, the footer should display "Powered by WirfonCloud - AWS Select Tier Partner" with a link to WirfonCloud's website.
+**Validates: Requirements 11.5, 11.6, 11.7**
+
+### Property 34: About Section Company Information
+*For any* access to the About section, it should display WirfonCloud's information as a training and consulting company with AWS Select Tier Partner status.
+**Validates: Requirements 11.8, 11.9**
 
 ## Error Handling
 

@@ -149,3 +149,20 @@ AWS Cloud Kigali is a modern, responsive web application designed to help studen
 8. WHEN an authenticated user makes changes offline, THE Offline_Manager SHALL queue changes and sync them when connectivity is restored
 9. THE Authentication_System SHALL allow users to sign out and clear local data
 10. THE User_Interface SHALL display the user's profile information (name, photo) when authenticated
+
+### Requirement 11: WirfonCloud Branding and Partnership Recognition
+
+**User Story:** As WirfonCloud, we want to display our company branding and AWS partnership status, so that users recognize our expertise and credibility as an AWS Select Tier Partner.
+
+#### Acceptance Criteria
+
+1. THE User_Interface SHALL display a splash screen with "Powered by WirfonCloud" when the application starts
+2. THE User_Interface SHALL include the WirfonCloud logo on the splash screen
+3. THE User_Interface SHALL display "AWS Select Tier Partner" designation alongside the WirfonCloud branding
+4. THE splash screen SHALL be visible for 2-3 seconds during initial application load
+5. THE User_Interface SHALL include WirfonCloud branding in the application footer on all screens
+6. THE footer SHALL display "Powered by WirfonCloud - AWS Select Tier Partner"
+7. THE User_Interface SHALL provide a link to WirfonCloud's website (training and consulting services)
+8. THE About section SHALL include information about WirfonCloud as a training and consulting company
+9. THE About section SHALL mention WirfonCloud's AWS Select Tier Partner status
+git remote remove origin
